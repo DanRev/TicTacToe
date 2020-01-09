@@ -10,8 +10,12 @@ class Square extends React.Component {
           className="buttonSquare"
           id={this.props.id}
           variant="outlined"
-          onClick={this.props.onClick}
-        />
+          onClick={() => {
+            this.props.onClick(this.props.id);
+          }}
+        >
+          {this.props.value}
+        </Button>
       </React.Fragment>
     );
   }

@@ -10,7 +10,6 @@ class Board extends React.Component {
 
   render() {
     var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var object = new Array(9);
     return (
       <React.Fragment>
         <div className="centerContent">
@@ -20,8 +19,7 @@ class Board extends React.Component {
               {array.map(value => {
                 return (
                   <div className="divKey" key={value}>
-                    <Square onClick={this.onclick} id={value} />
-                    {console.log(document.getElementById(value))}
+                    <Square onClick={this.onclick} id={value} value="" />
                   </div>
                 );
               })}
