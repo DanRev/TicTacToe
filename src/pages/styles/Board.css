@@ -28,3 +28,12 @@
   width: 100vw;
   height: 100vh;
 }
+
+@media screen and (max-height: 768px) {
+  .section-container {
+    margin-bottom: 150px;
+  }
+  .title {
+    margin-bottom: 200px;
+  }
+}

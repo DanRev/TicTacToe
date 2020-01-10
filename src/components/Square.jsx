@@ -3,6 +3,14 @@ import Button from "@material-ui/core/Button";
 import "./styles/Square.css";
 
 class Square extends React.Component {
+  state = {
+    valor: ""
+  };
+
+  updateState = stateModify => {
+    this.setState({ valor: stateModify });
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -12,9 +20,10 @@ class Square extends React.Component {
           variant="outlined"
           onClick={() => {
             this.props.onClick(this.props.id);
+            this.updateState(this.props.onChange());
           }}
         >
-          {this.props.value}
+          {this.state.valor}
         </Button>
       </React.Fragment>
     );
