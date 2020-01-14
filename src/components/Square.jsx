@@ -19,8 +19,7 @@ class Square extends React.Component {
           id={this.props.id}
           variant="outlined"
           onClick={() => {
-            this.props.onClick(this.props.id);
-            this.updateState(this.props.onChange());
+            this.updateState(this.props.onChange(this.props.id));
           }}
         >
           {this.state.valor}
